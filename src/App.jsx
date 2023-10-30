@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PianoRollGrid from "./components/PianoRollGrid";
 import Nav from "./components/Nav";
 import { loadPianoRollsData } from "./utils/Repository";
-import axios from "axios";
+import "./app.scss";
 
 function App() {
   const [pianoRollsData, setPianoRollsData] = useState([]);
