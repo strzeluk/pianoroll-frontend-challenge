@@ -1,26 +1,33 @@
-import { useEffect, useState } from "react";
-import PianoRollGrid from "./components/PianoRollGrid";
-import Nav from "./components/Nav";
-import { loadPianoRollsData } from "./utils/Repository";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import PianoRollGrid, { loader as dataLoader } from "./pages/PianoRollGrid";
+import PianoRollDetails from "./pages/PianoRollDetails";
+import RootLayout from "./pages/RootLayout";
+import ErrorPage from "./pages/Error";
+
 import "./app.scss";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <PianoRollGrid />,
+        loader: dataLoader,
+      },
+      {
+        path: "/details/:rollId",
+        element: <PianoRollDetails />,
+      },
+    ],
+  },
+]);
+
 function App() {
-  const [pianoRollsData, setPianoRollsData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await loadPianoRollsData();
-      setPianoRollsData(result);
-    };
-    fetchData();
-  }, []);
-
-  return (
-    <>
-      <Nav />
-      <PianoRollGrid pianoRollsData={pianoRollsData} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

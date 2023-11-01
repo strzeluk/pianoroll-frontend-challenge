@@ -17,6 +17,11 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @mixin mobile {
   @media (max-width: 738px) {
     @content;

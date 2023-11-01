@@ -1,8 +1,8 @@
 .piano_roll_card {
-  // border: 1px solid #ccc;
-
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 
   .piano_roll_card__description {
     margin: 10px 0;
@@ -10,7 +10,7 @@
 
   .piano_roll_crad__svg {
     border: 2px solid #381815;
-    height: 180px;
+    height: 100%;
     width: 100%;
   }
 }
