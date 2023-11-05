@@ -2,7 +2,8 @@
 
 ## Final result
 
-(Movie)
+[Piano-Roll-Coding-Challenge.webm](https://github.com/strzeluk/pianoroll-frontend-challenge/assets/58707956/7343e9bb-9a94-4d7d-bfbb-ef6091db1733)
+
 
 Everything is working on desktop, tablet and mobile screens. Application is logging selection start and end points to the console.
 
