@@ -10,7 +10,11 @@ const PianoRollGrid = () => {
     <div className={styles.piano_roll_grid}>
       {pianoRollsData.map((pianoRollData, index) => (
         <Link to={`/details/${index}`} state={pianoRollsData} key={index}>
-          <PianoRollCard pianoRollData={pianoRollData} index={index} />
+          <PianoRollCard
+            pianoRollData={pianoRollData}
+            index={index}
+            isMain={false}
+          />
         </Link>
       ))}
     </div>

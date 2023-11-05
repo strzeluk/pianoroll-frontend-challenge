@@ -2,7 +2,6 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import styles from "./pianoRollDetails.module.scss";
 import PianoRollCard from "../components/PianoRollCard";
 import { useEffect, useState } from "react";
-import { loadPianoRollsData } from "../utils/Repository";
 
 const PianoRollDetails = () => {
   const { rollId } = useParams();
@@ -29,7 +28,11 @@ const PianoRollDetails = () => {
   return (
     <div className={styles.conteiner}>
       <div className={styles.main_pianoroll}>
-        <PianoRollCard pianoRollData={pianoRollsData[ID]} index={ID} />
+        <PianoRollCard
+          pianoRollData={pianoRollsData[ID]}
+          index={ID}
+          isMain={true}
+        />
       </div>
       <div className={styles.side_pianorolls_list}>
         <h2>PianoRoll List</h2>
@@ -40,7 +43,11 @@ const PianoRollDetails = () => {
             onClick={handleClick}
             key={index}
           >
-            <PianoRollCard pianoRollData={pianoRollData} index={index} />
+            <PianoRollCard
+              pianoRollData={pianoRollData}
+              index={index}
+              isMain={false}
+            />
           </div>
         ))}
       </div>

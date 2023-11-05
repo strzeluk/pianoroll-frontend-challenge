@@ -2,10 +2,10 @@
 
 .piano_roll_grid {
   display: grid;
-  gap: 50px;
+  column-gap: 50px;
   margin: 20px 80px;
   grid-template-columns: repeat(3, auto);
-  grid-auto-rows: 200px;
+  grid-auto-rows: max-content;
 
   @include tablet {
     margin: 20px;

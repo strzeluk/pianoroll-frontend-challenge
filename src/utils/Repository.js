@@ -16,6 +16,6 @@ export const loadPianoRollsData = async () => {
     return pianoData;
   } catch (error) {
     console.error("Error loading data:", error);
-    throw error;
+    throw new Error("Error loading data");
   }
 };

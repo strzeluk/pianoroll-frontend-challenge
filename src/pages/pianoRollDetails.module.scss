@@ -15,9 +15,12 @@
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding: 30px;
+    padding: 20px 30px;
     height: 100%;
     background-color: rgb(219, 235, 233);
+    h2 {
+      margin-bottom: 10px;
+    }
 
     @include mobile {
       width: 100%;
@@ -31,7 +34,7 @@
     }
 
     .side_pianorolls_item {
-      height: 190px;
+      height: 100%;
       width: 100%;
       cursor: pointer;
 
@@ -42,8 +45,10 @@
   }
 
   .main_pianoroll {
+    display: flex;
+    flex-direction: column;
     width: 75%;
-    margin: 30px;
+    margin: 10px;
     height: 50vh;
 
     @include mobile {
@@ -54,7 +59,7 @@
 
     @include tablet {
       width: 100%;
-      padding: 15px;
+      margin: 10px;
       margin: 0;
     }
   }
