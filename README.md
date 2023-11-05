@@ -14,7 +14,7 @@ Initaial project was migrated to React Framework using Vite.js as a project crea
 To run this projekt localy you have to:
 
 1. Install node.js (and npm if you don't have it)
-2. Clone projekt from my git
+2. Clone project from my git
 3. Run npm install
 4. Run npm run dev
 
